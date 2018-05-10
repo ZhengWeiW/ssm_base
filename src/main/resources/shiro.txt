@@ -1,0 +1,24 @@
+1.创建一个maven项目，骨架：webapp
+2.导入相关的jar
+	Spring,SpringMVC
+	Shiro-core
+	Shiro-echace
+	shiro-spring
+	servlet-api
+	log jar包
+
+3.配置web.xml
+  a.ShiroFilter
+  b.配置SpringMVC
+  
+4.spring的配置文件 
+	a.shiro核心组件
+	b.shiro-跟spring集成一些配置
+	c.ShiroFilter
+	
+	
+认证：
+1.登录页面
+2.进行验证
+3.成功，跳转到成功页面
+4.失败调转到失败页面
