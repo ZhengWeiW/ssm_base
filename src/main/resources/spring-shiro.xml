@@ -47,8 +47,8 @@
 	<bean id="connectionFactory"
 		class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory">
 		<property name="poolConfig" ref="poolConfig" />
-		<property name="port" value="6379" />
-		<property name="hostName" value="192.168.40.137" />
+		<property name="port" value="7001" />
+		<property name="hostName" value="192.168.0.91" />
 		<property name="password" value="123456" /> 
 		<property name="timeout" value="3000"></property>
 	</bean>
