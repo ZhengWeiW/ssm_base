@@ -26,7 +26,7 @@ public class LoginController {
 	
 	@Autowired
 	private UserService userService;
-	
+	//记录日志
 	protected Logger log = Logger.getLogger(LoginController.class);
 	
 	@RequestMapping("/login")
