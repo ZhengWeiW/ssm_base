@@ -136,9 +136,28 @@ public class RedisUtil {
 		}
 		return result;
 	}
+	
+	
+	public boolean setnx(final String key, Object value, Long expireTime) {
+		boolean result = false;
+		try {
+			ValueOperations<Serializable, Object> operations = redisTemplate
+					.opsForValue();
+			operations.setIfAbsent(key, value);
+			redisTemplate.expire(key, expireTime, TimeUnit.SECONDS);
+			result = true;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
 
 	public void setRedisTemplate(
 			RedisTemplate<Serializable, Object> redisTemplate) {
 		this.redisTemplate = redisTemplate;
 	}
+	
+	
+	
+	
 }
